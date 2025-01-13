@@ -5,7 +5,7 @@ import PageNotFound from "./views/NotFound";
 import useAuth from "./hooks/useAuth";
 import ReactModal from "react-modal";
 
-ReactModal.setAppElement('#root'); 
+ReactModal.setAppElement("#root");
 
 function App() {
   const { isAuthenticated } = useAuth();
@@ -13,6 +13,10 @@ function App() {
     <Routes>
       {isAuthenticated ? (
         <>
+          <Route
+            path="/"
+            element={<Navigate to="/home" />}
+          />
           <Route
             path="/*"
             element={<PrivateRoutes />}
