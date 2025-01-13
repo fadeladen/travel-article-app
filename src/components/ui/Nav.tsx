@@ -29,7 +29,7 @@ const Nav = () => {
   };
   return (
     <div className="relative">
-      <nav className="bg-white border-b px-5 md:px-0 text-sm fixed top-0 z-50 w-full">
+      <nav className="bg-white border-b px-2 md:px-0 text-sm fixed top-0 z-50 w-full">
         <div className="w-full min-h-16 container mx-auto flex justify-between items-center">
           <h3
             onClick={() => handleClickLink("/home")}

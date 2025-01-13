@@ -35,7 +35,7 @@ const ProfilePage = () => {
   return (
     <div>
       <h1 className="text-2xl font-semibold pb-3 border-b">Profile</h1>
-      <div className="flex flex-col md:flex-row mt-10 bg-white p-8 rounded-x flex-1">
+      <div className="flex flex-col md:flex-row mt-10 bg-white p-3 md:p-8 rounded-x flex-1">
         <div className="basis-1/4">
           <UserInfo data={user} />
         </div>

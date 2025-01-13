@@ -2,7 +2,7 @@ import { memo } from "react";
 
 const ArticleSkeleton = () => {
   return (
-    <div className="w-full mx-auto grid grid-cols-4 gap-4">
+    <div className="w-full mx-auto grid grid-cols-1 md:grid-cols-4 gap-4">
       {[1, 2, 3, 4].map((item) => (
         <div
           key={item}
