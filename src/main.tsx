@@ -6,8 +6,11 @@ import { Provider } from "react-redux";
 import { store, persistor } from "./store/index.ts";
 import { PersistGate } from "redux-persist/integration/react";
 
+const basename =
+  import.meta.env.MODE === "production" ? "/travel-article-app" : "/";
+
 createRoot(document.getElementById("root")!).render(
-  <BrowserRouter>
+  <BrowserRouter basename={basename}>
     <Provider store={store}>
       <PersistGate
         loading={

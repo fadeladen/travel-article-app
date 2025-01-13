@@ -39,6 +39,10 @@ function App() {
         </>
       )}
       <Route
+        path="*"
+        element={<PageNotFound />}
+      />
+      <Route
         path="error/404"
         element={<PageNotFound />}
       />
