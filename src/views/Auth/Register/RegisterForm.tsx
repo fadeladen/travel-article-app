@@ -117,12 +117,12 @@ export default function RegisterForm() {
       <div className="mt-3 text-sm text-center">
         <p>
           Already have an account?{" "}
-          <a
-            href={"/auth/login"}
-            className="text-primary underline"
+          <span
+            onClick={() => navigate("/auth/login")}
+            className="text-primary underline cursor-pointer"
           >
             Login here
-          </a>
+          </span>
         </p>
       </div>
     </div>

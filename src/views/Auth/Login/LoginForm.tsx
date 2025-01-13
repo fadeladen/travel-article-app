@@ -6,6 +6,7 @@ import { apiSignIn } from "../../../services/AuthService";
 import { useDispatch } from "react-redux";
 import { onSignInSuccess } from "../../../store/auth/authSlice";
 import toast from "react-hot-toast";
+import { useNavigate } from "react-router-dom";
 
 export interface LoginFormType {
   identifier: string;
@@ -44,6 +45,9 @@ export default function LoginForm() {
       toast.error(error?.response?.data?.error?.message || "Login failed");
     }
   }
+
+  const navigate = useNavigate();
+
   return (
     <div className="flex flex-col">
       <form onSubmit={handleSubmit(onSubmit)}>
@@ -94,12 +98,12 @@ export default function LoginForm() {
       <div className="mt-3 text-sm text-center">
         <p>
           No account?{" "}
-          <a
-            href={"/auth/register"}
-            className="text-primary underline"
+          <span
+            onClick={() => navigate("/auth/register")}
+            className="text-primary underline cursor-pointer"
           >
             Register here
-          </a>
+          </span>
         </p>
       </div>
     </div>
