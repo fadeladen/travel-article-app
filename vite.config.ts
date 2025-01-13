@@ -43,7 +43,7 @@ const manifestForPlugIn: Partial<VitePWAOptions> = {
 };
 
 // https://vite.dev/config/
-export default defineConfig({
+export default defineConfig(({ mode }) => ({
   plugins: [react(), VitePWA(manifestForPlugIn)],
-  base: "/travel-article-app/"
-});
+  base: mode === "production" ? "/travel-article-app/" : "/",
+}));
