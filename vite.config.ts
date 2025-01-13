@@ -45,4 +45,5 @@ const manifestForPlugIn: Partial<VitePWAOptions> = {
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react(), VitePWA(manifestForPlugIn)],
+  base: "/travel-article-app/"
 });
