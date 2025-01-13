@@ -10,7 +10,7 @@
     "preview": "vite preview",
     "watch:css": "npx tailwindcss -i ./src/assets/styles/app.css -o ./src/index.css --watch",
     "predeploy" : "npm run build",
-    "deploy" : "gh-pages -d build"
+    "deploy" : "gh-pages -d dist"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",

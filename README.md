@@ -2,6 +2,6 @@
 
 Steps to run the application:
 
-- npm install or yarn (if you using yarn)
+- npm install
 - create .env file and copy all variables from .env.example
 - npm run dev
